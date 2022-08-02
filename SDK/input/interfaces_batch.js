@@ -1,0 +1,205 @@
+export interface ContextStore {
+    id?: string;
+    group_id?: string;
+  }
+  export interface ContextUser {
+    groups?: Array<string>;
+    order_id?: Array<string>;
+    gender?: string;
+    email?: string;
+    uuid?: string;
+    id?: string;
+    new_user?: boolean;
+  }
+  export interface ContextPage {
+    skus?: Array<string>;
+    product_groups?: Array<string>;
+    category_uri?: string;
+    uri?: string;
+    ccid?: string;
+    category_id?: string;
+    locale_country?: string;
+    locale_language?: string;
+    locale_currency?: string;
+    referrer?: string;
+    title?: string;
+    container_id?: string;
+    all_category_ids?: Array<string>;
+  }
+  export interface ContextCampaign {
+    utm_campaign?: string;
+    utm_source?: string;
+  }
+  export interface ContextGeo {
+    ip?: string;
+    country?: string;
+    state?: string;
+    city?: string;
+    zip?: string;
+  }
+  export interface ContextFitment {
+    ids?: Array<string>;
+    items?: Array<any>;
+  }
+  export interface ContextBrowser {
+    user_agent?: string;
+    device?: string;
+    app_type?: string;
+  }
+  export interface ContextChannel {
+    type?: string;
+  }
+  export interface IContext extends RequestData<Props> {
+    getBrowser(): ContextBrowser;
+    setBrowser(value: ContextBrowser): IContext;
+    resetBrowser(): IContext;
+    updateBrowser(value: ContextBrowser): IContext;
+    getBrowserAppType(): string;
+    setBrowserAppType(value: string): IContext;
+    resetBrowserAppType(): IContext;
+    getBrowserDevice(): string;
+    setBrowserDevice(value: string): IContext;
+    resetBrowserDevice(): IContext;
+    getBrowserUserAgent(): string;
+    setBrowserUserAgent(value: string): IContext;
+    resetBrowserUserAgent(): IContext;
+    getCampaign(): ContextCampaign;
+    setCampaign(value: ContextCampaign): IContext;
+    resetCampaign(): IContext;
+    updateCampaign(value: ContextCampaign): IContext;
+    getCampaignUtmCampaign(): string;
+    setCampaignUtmCampaign(value: string): IContext;
+    resetCampaignUtmCampaign(): IContext;
+    getCampaignUtmSource(): string;
+    setCampaignUtmSource(value: string): IContext;
+    resetCampaignUtmSource(): IContext;
+    getChannel(): ContextChannel;
+    setChannel(value: ContextChannel): IContext;
+    resetChannel(): IContext;
+    updateChannel(value: ContextChannel): IContext;
+    getChannelType(): string;
+    setChannelType(value: string): IContext;
+    resetChannelType(): IContext;
+    getFitment(): ContextFitment;
+    setFitment(value: ContextFitment): IContext;
+    resetFitment(): IContext;
+    updateFitment(value: ContextFitment): IContext;
+    getFitmentIds(): Array<string>;
+    setFitmentIds(value: Array<string>): IContext;
+    resetFitmentIds(): IContext;
+    addFitmentId(value: string): IContext;
+    removeFitmentId(value: string, filter?: (v: any) => boolean): IContext;
+    getFitmentItems(): Array<any>;
+    setFitmentItems(value: Array<any>): IContext;
+    resetFitmentItems(): IContext;
+    addFitmentItem(value: any): IContext;
+    removeFitmentItem(value: any, filter?: (v: any) => boolean): IContext;
+    getGeo(): ContextGeo;
+    setGeo(value: ContextGeo): IContext;
+    resetGeo(): IContext;
+    updateGeo(value: ContextGeo): IContext;
+    getGeoCity(): string;
+    setGeoCity(value: string): IContext;
+    resetGeoCity(): IContext;
+    getGeoCountry(): string;
+    setGeoCountry(value: string): IContext;
+    resetGeoCountry(): IContext;
+    getGeoIp(): string;
+    setGeoIp(value: string): IContext;
+    resetGeoIp(): IContext;
+    getGeoState(): string;
+    setGeoState(value: string): IContext;
+    resetGeoState(): IContext;
+    getGeoZip(): string;
+    setGeoZip(value: string): IContext;
+    resetGeoZip(): IContext;
+    getPage(): ContextPage;
+    setPage(value: ContextPage): IContext;
+    resetPage(): IContext;
+    updatePage(value: ContextPage): IContext;
+    getPageAllCategoryIds(): Array<string>;
+    setPageAllCategoryIds(value: Array<string>): IContext;
+    resetPageAllCategoryIds(): IContext;
+    addPageAllCategoryId(value: string): IContext;
+    removePageAllCategoryId(value: string, filter?: (v: any) => boolean): IContext;
+    getPageCategoryId(): string;
+    setPageCategoryId(value: string): IContext;
+    resetPageCategoryId(): IContext;
+    getPageCategoryUri(): string;
+    setPageCategoryUri(value: string): IContext;
+    resetPageCategoryUri(): IContext;
+    getPageCcid(): string;
+    setPageCcid(value: string): IContext;
+    resetPageCcid(): IContext;
+    getPageContainerId(): string;
+    setPageContainerId(value: string): IContext;
+    resetPageContainerId(): IContext;
+    /** page.locale_country */
+    getPageLocaleCountry(): string;
+    setPageLocaleCountry(value: string): IContext;
+    resetPageLocaleCountry(): IContext;
+    getPageLocaleCurrency(): string;
+    setPageLocaleCurrency(value: string): IContext;
+    resetPageLocaleCurrency(): IContext;
+    getPageLocaleLanguage(): string;
+    setPageLocaleLanguage(value: string): IContext;
+    resetPageLocaleLanguage(): IContext;
+    getPageProductGroups(): Array<string>;
+    setPageProductGroups(value: Array<string>): IContext;
+    resetPageProductGroups(): IContext;
+    addPageProductGroup(value: string): IContext;
+    removePageProductGroup(value: string, filter?: (v: any) => boolean): IContext;
+    getPageReferrer(): string;
+    setPageReferrer(value: string): IContext;
+    resetPageReferrer(): IContext;
+    getPageSkus(): Array<string>;
+    setPageSkus(value: Array<string>): IContext;
+    resetPageSkus(): IContext;
+    addPageSku(value: string): IContext;
+    removePageSku(value: string, filter?: (v: any) => boolean): IContext;
+    getPageTitle(): string;
+    setPageTitle(value: string): IContext;
+    resetPageTitle(): IContext;
+    getPageUri(): string;
+    setPageUri(value: string): IContext;
+    resetPageUri(): IContext;
+    getStore(): ContextStore;
+    setStore(value: ContextStore): IContext;
+    resetStore(): IContext;
+    updateStore(value: ContextStore): IContext;
+    getStoreGroupId(): string;
+    setStoreGroupId(value: string): IContext;
+    resetStoreGroupId(): IContext;
+    getStoreId(): string;
+    setStoreId(value: string): IContext;
+    resetStoreId(): IContext;
+    getUser(): ContextUser;
+    setUser(value: ContextUser): IContext;
+    resetUser(): IContext;
+    updateUser(value: ContextUser): IContext;
+    getUserEmail(): string;
+    setUserEmail(value: string): IContext;
+    resetUserEmail(): IContext;
+    getUserGender(): string;
+    setUserGender(value: string): IContext;
+    resetUserGender(): IContext;
+    getUserGroups(): Array<string>;
+    setUserGroups(value: Array<string>): IContext;
+    resetUserGroups(): IContext;
+    addUserGroup(value: string): IContext;
+    removeUserGroup(value: string, filter?: (v: any) => boolean): IContext;
+    getUserId(): string;
+    setUserId(value: string): IContext;
+    resetUserId(): IContext;
+    getUserNewUser(): boolean;
+    setUserNewUser(value: boolean): IContext;
+    resetUserNewUser(): IContext;
+    getUserOrderIds(): Array<string>;
+    setUserOrderIds(value: Array<string>): IContext;
+    resetUserOrderIds(): IContext;
+    addUserOrderId(value: string): IContext;
+    removeUserOrderId(value: string, filter?: (v: any) => boolean): IContext;
+    getUserUuid(): string;
+    setUserUuid(value: string): IContext;
+    resetUserUuid(): IContext;
+  }
