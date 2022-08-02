@@ -420,7 +420,7 @@ export interface Request {
   removeKey<Prop>(prop: Prop, keyToRemove: string | number): default<Props>
   updateValue<Prop>(prop: Prop, value: any, key?: string): default<Props>
   addValue<Prop>(prop: Prop, value: any, key?: string): default<Props>
-  //removeValue<Prop>(prop: Prop, value: any, filter?: (v: any, value: any) => boolean, key?: string): default<Props>
+  removeValue<Prop>(prop: Prop, value: any, filter?: (v: any, value: any) => boolean, key?: string): default<Props>
   transformJson(json: any): any
   toJson(...props: string[]): any
   onChange(prop: string, value: any): void

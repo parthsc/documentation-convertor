@@ -76,6 +76,6 @@ codeblock = readObject('C:/Users/pup/Documents/SCPython/documentation-convertor/
 doclist = createDocList (codeblock)    
 output = setMethods( codeblock, doclist )
 
-f = open("C:/Users/pup/Documents/SCPython/documentation-convertor/SDK/taggedmethods.js", "w")
+f = open("C:/Users/pup/Documents/SCPython/documentation-convertor/SDK/output/taggedmethods.js", "w")
 f.write("\n".join( ["export interface Request {"] + output + ['}']))
 f.close()
