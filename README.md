@@ -13,4 +13,4 @@ documentation-convertor - JS comments to Paligo and back
 4. Run
 5. Add missing comment tags for complex argument methods
 
-## Store all code blocks with completed documentation in the documentation complete folder. ##
+## Store all code blocks with completed documentation in the "Documentation Blocks" folder. ##
